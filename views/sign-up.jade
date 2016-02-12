@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="header")
+      h1= title
+      p Sign Up page
+
+      form(action="/sign-up", method="post")
+        label(for="postUsername") Name
+        input(type="text", id="postUsername", name="postUsername")
+        br
+        label(for="postPassword") Password
+        input(type="password", id="postPassword", name="postPassword")
+        input(type="submit")

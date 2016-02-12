@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="header")
+      h1= title
+      p Sign in page
+
+      form(action="/sign-in", method="post")
+        label(for="checkName") Name
+        input(type="text", id="checkName", name="checkName")
+        br
+        label(for="checkPassword") Password
+        input(type="password", id="checkPassword", name="checkPassword")
+        input(type="submit")
