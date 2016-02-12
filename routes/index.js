@@ -4,7 +4,7 @@ var fs = require("fs");
 
 var mongoose = require('mongoose');
 var User = require('../models/user');
-var connectionString = CUSTOMCONNSTR_mongoLab || "mongodb://localhost/test";
+var connectionString = process.env.CUSTOMCONNSTR_mongoLab || "mongodb://localhost/test";
 mongoose.connect(connectionString);
 
 var db = mongoose.connection;
