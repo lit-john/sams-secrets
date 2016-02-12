@@ -4,7 +4,8 @@ var fs = require("fs");
 
 var mongoose = require('mongoose');
 var User = require('../models/user');
-mongoose.connect('mongodb://localhost/test');
+var connectionString = CUSTOMCONNSTR_mongoLab || "mongodb://localhost/test";
+mongoose.connect(connectionString);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
